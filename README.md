@@ -74,22 +74,23 @@ Length: 2
 -->/psf/volunteer
 ```
 
-Length shows the longest distance, in graph edges, between two points in the graph.
-Next goes the list of the path nodes.
+Length shows the longest distance, in graph edges, between two nodes. Next goes
+the list of the path nodes.
 
 - - -
 
 ## Caveats
 
 This program is not capable of working with dynamic sites, such as Single page
-applications. And makes some naive assumptions:
+applications. It makes some naive assumptions:
 
-* URLs belonging to the same domain belong to the same site, which is not always true.
-* **.WWW** prefixes in domain names are ignored. Thus, *www.python.org* is the same
-  as *python.org*. It works in most cases.
-* Parameter and query parts of URLs are ignored when comparing page addresses. E.g.
-  *http://example.com/* and  *http://example.com/?foo=bar* are treated as the same.
-  address.
+* URLs from the same domain belong to the same site, which is not always true.
+* **.WWW** prefixes in domain names are not important. Thus, *www.python.org* is
+  the same entry as *python.org*. It works in most cases.
+* Parameter and query parts of an URL do not determine page addresses. E.g.
+  *http://example.com/* and  *http://example.com/?foo=bar* are treated as the
+  same page. There are few web frameworks that generate different pages for
+  different queries.
 
 ## TODOs
 
