@@ -87,7 +87,8 @@ This program is not capable of working with dynamic sites, such as Single Page
 Applications. It makes some naive assumptions:
 
 * URLs from the same domain belong to the same site, which is not always true.
-* Different domains mean different sites. weather.yandex.ru
+* Different domains mean different sites. So, *weather.yandex.ru* and
+  *tv.yandex.ru* are recognized as different sites. 
 * **.WWW** prefixes in domain names are not important. Thus, *www.python.org* is
   the same entry as *python.org*. It works in most cases.
 * Parameter and query parts of an URL do not determine page addresses. E.g.
@@ -103,4 +104,5 @@ Applications. It makes some naive assumptions:
 1. Replace recursive traversal function with Producer/Consumer design.
 1. Add proxy support.
 1. Allow unlimited depth.
+1. Add width limit (maybe, based on graph diameter).
 1. Use  [NetworkX](https://networkx.github.io/) library instead of custom graph.
