@@ -85,6 +85,7 @@ This program is not capable of working with dynamic sites, such as Single page
 applications. It makes some naive assumptions:
 
 * URLs from the same domain belong to the same site, which is not always true.
+* Different domains mean different sites. weather.yandex.ru
 * **.WWW** prefixes in domain names are not important. Thus, *www.python.org* is
   the same entry as *python.org*. It works in most cases.
 * Parameter and query parts of an URL do not determine page addresses. E.g.
