@@ -43,8 +43,11 @@ First, traverse a site, e.g.
 $ python sitewalker/traverse.py -d4  http://python.org/
 ```
 
-Sitemap will be saved to a JSON file, named **"sitemap.json"**.
-**-d4** means maximal depth of 4 levels. To see all available options, type:
+* Sitemap named **"sitemap.json"** will be saved to a JSON file. You may choose
+  another file name via **-o** command line parameter
+* **-d4** means maximal depth of 4 levels.
+
+To see all available options, type:
 
 ```
 $ python sitewalker/traverse.py --help
@@ -67,7 +70,6 @@ $ python sitewalker/diameter.py sitemap.json
 Sample output:
 
 ```
-2018-01-28 12:30:38 - INFO     - loading graph from sitemap.json...
 Length: 2
 /
 -->/psf-landing/
@@ -81,8 +83,8 @@ the list of the path nodes.
 
 ## Caveats
 
-This program is not capable of working with dynamic sites, such as Single page
-applications. It makes some naive assumptions:
+This program is not capable of working with dynamic sites, such as Single Page
+Applications. It makes some naive assumptions:
 
 * URLs from the same domain belong to the same site, which is not always true.
 * Different domains mean different sites. weather.yandex.ru
@@ -96,6 +98,7 @@ applications. It makes some naive assumptions:
 ## TODOs
 
 1. Add more methods for exploring site maps, including visualization.
+1. Add configuration file.
 1. Make site traversal asynchronous.
 1. Replace recursive traversal function with Producer/Consumer design.
 1. Add proxy support.
