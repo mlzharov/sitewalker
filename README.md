@@ -58,7 +58,7 @@ $ python sitewalker/traverse.py --help
 
 ### Exploring
 
-Next, investigate the map. To calculate the graph **diameter**:
+To calculate the graph **diameter**:
 
 ```
 $ python sitewalker/diameter.py sitemap.json
