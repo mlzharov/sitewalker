@@ -84,11 +84,11 @@ the list of the path nodes.
 ## Caveats
 
 This program is not capable of working with dynamic sites, such as Single Page
-Applications. It makes some naive assumptions:
+Applications. Futher, it makes some naive assumptions:
 
 * URLs from the same domain belong to the same site, which is not always true.
 * Different domains mean different sites. So, *weather.yandex.ru* and
-  *tv.yandex.ru* are recognized as different sites. 
+  *tv.yandex.ru* are recognized as different sites.
 * **.WWW** prefixes in domain names are not important. Thus, *www.python.org* is
   the same entry as *python.org*. It works in most cases.
 * Parameter and query parts of an URL do not determine page addresses. E.g.
